@@ -1,17 +1,17 @@
-#define π 3.1415936
 #include <stdio.h>
 int main()
-{ float r,h,a,b,c,d,e;
-scanf("%f%f",&r,&h);
-a=2*π*r;
-b=π*r*r;
-c=4*π*r*r;
-d=4/3*π*r*r*r;
-e=π*r*r*h;
-printf("圆周长是%.2f\n",a);
-printf("圆面积是%.2f\n",b);
-printf("圆球表面积是%.2f\n",c);
-printf("圆球体积是%.2f\n",d);
-printf("圆柱体积是%.2f\n",e);
-return 0;
+{
+  int age;
+  scanf("%d",&age);
+  if (age<12&&age>0)
+  printf("年龄小于12\n");
+  else if(age>65&&age<150)
+  printf("年龄大于65\n");
+  else if(age<=0)
+  printf("别闹\n");
+  else if(age>=150)
+  printf("长寿\n");
+  else
+  printf("在12到65之间\n"); 
+    return 0;
 }
