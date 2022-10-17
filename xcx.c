@@ -1,9 +1,10 @@
 #include <stdio.h>
 int main()
 {
-  double a,b,max;
-  scanf("%lf%lf", &a,&b);
-  max=(a>b)?a:b;
-  printf("%lf",max);
+int x,y;
+for (x=0,y=0;x<2&&y<5;++x,y++)
+{
+printf("xcx\n");
+}
   return 0;
 }
