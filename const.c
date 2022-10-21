@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <math.h>
 int main()
 {
-    int year;
-    scanf("%d",&year);
-    if (year%4==0&&year%100!=0||year%400==0)
-    printf("闰年");
+    char c;
+    scanf("%c", &c);
+    if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+        printf("是字母");
     else
-    printf("不是哟");    
-return 0;
+        printf("不是");
+    return 0;
 }
