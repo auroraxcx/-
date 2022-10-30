@@ -1,12 +1,11 @@
-#include <stdio.h>
-#include <math.h>
+#include<stdio.h>
+#include <string.h>
 int main()
+
 {
-    char c;
-    scanf("%c", &c);
-    if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-        printf("是字母");
-    else
-        printf("不是");
+    char arr1[] = "bit";
+    char arr2[20] = "###########";
+    strcpy(arr2,arr1);
+    printf("%s\n", arr2);
     return 0;
 }

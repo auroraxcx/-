@@ -6,8 +6,10 @@ int main()
     {
         for (j = 1; j < 6; j++)
         {
-            printf("%d", i*j);
             printf("\t");
+            if (j ==3)
+                continue;
+            printf("%d", i * j);
         }
         printf("\n");
     }
