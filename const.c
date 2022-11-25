@@ -2,15 +2,26 @@
 #include <string.h>
 int main()
 {
-    int a = 1, b = 1, i, m, n;
-    scanf("%d", &m);
-    printf("%d\n%d\n", a, b);
-    for (i = 1; i <= m; i++)
+    int a[10];
+    int i, j, t;
+    printf("请输入十个数字\n");
+    for (i = 0; i < 10; i++)
     {
-        n = a + b;
-        printf("%d\n", n);
-        a = b;
-        b = n;
+        scanf("%d", &a[i]);
+    }
+    for (j = 0; j < 9; j++)
+        for (i = 0; i < 9-j ; i++)
+            if (a[i] > a[i + 1])
+            {
+                t = a[i + 1];
+                a[i + 1] = a[i];
+                a[i] = t;
+            }
+    printf("结果是\n");
+    for (i = 0; i < 10; i++)
+    {
+        printf("%d", a[i]);
+        printf("\n");
     }
     return 0;
 }
