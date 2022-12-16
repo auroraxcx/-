@@ -1,33 +1,38 @@
 #include <stdio.h>
 int main()
 {
-	int gcd(int x, int y);
-	int lcm(int x, int y);
-	int a, b;
-	int G, L;
-	scanf("%d,%d", &a, &b);
-	G = gcd(a, b);
-	printf("G=%d\n", G);
-	L = lcm(a, b);
-	printf("L=%d\n", L);
+	void sort(int *x, int n);
+	int i, *p;
+	int a[10];
+	p = a;
+	for (i = 0; i < 10; i++)
+	{
+		scanf("%d", p++);
+	}
+	p = a;
+	sort(p, 10);
+	for (p = a, i = 0; i < 10; i++)
+	{
+		printf("%d  ", *p);
+		p++;
+	}
+	printf("\n");
 	return 0;
 }
-int gcd(int x, int y)
+void sort(int *x, int n)
 {
-	int m;
-	m = x % y;
-	for (; m != 0; m = x % y)
+	int i, j, k, t;
+	for (i = 0; i < n - 1; i++)
 	{
-		x = y;
-		y = m;
+		k = i;
+		for (j = i + 1; j < n; j++)
+			if (*(x + j) > *(x + k))
+				k = j;
+		if (k != i)
+		{
+			t = *(x + i);
+			*(x + i) = *(x + k);
+			*(x + k) = t;
+		}
 	}
-	return (y);
-}
-int lcm(int x, int y)
-{
-	int t, n;
-	int gcd(int x, int y);
-	t = gcd(x, y);
-	n = x * y / t;
-	return (n);
 }

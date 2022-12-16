@@ -1,21 +1,36 @@
-#include <stdio.h>//用指针比大小并交换
+#include <stdio.h> 
 int main()
 {
-    int a, b;
-    int *p = &a, *q = &b;
-    void swap(int *x, int *y);
-    scanf("%d,%d", p, q);
-    if (a < b)
+    void sort(int x[], int n);
+    int i, *p, a[10];
+    p = a;
+    printf("请输入十个数字:\n");
+    for (i = 0; i < 10; i++)
+        scanf("%d", p++);
+    p = a;
+    sort(p, 10);
+    for (p = a, i = 0; i < 10; i++)
     {
-        swap(p, q);
+        printf("%d  ", *p);
+        p++;
     }
-    printf("max=%d,min=%d\n", a, b);
+    printf("\n");
     return 0;
 }
-void swap(int *x, int *y)
+void sort(int x[], int n)
 {
-    int c;
-    c = *x;
-    *x = *y;
-    *y = c;
+    int i, j, k, t;
+    for (i = 0; i < n - 1; i++)
+    {
+        k = i;
+        for (j = i + 1; j < n; j++)
+            if (x[j] > x[k])
+                k = j;
+        if (k != i)
+        {
+            t = x[i];
+            x[i] = x[k];
+            x[k] = t;
+        }
+    }
 }
