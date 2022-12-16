@@ -1,33 +1,33 @@
 #include <stdio.h>
 int main()
 {
-	int i, j, row, colum, max;
-	int a[3][4];
-	for (i = 0; i < 3; i++)
-		for (j = 0; j < 4; j++)
-		{
-			scanf("%d", &a[i][j]);
-		}
-	max = a[0][0];
-	for (i = 0; i < 3; i++)
-	{
-		for (j = 0; j < 4; j++)
-		{
-			if (a[i][j] > max)
-			{
-				max = a[i][j];
-			}
-		}
-	}
-	for (i = 0; i < 3; i++)
-	{
-		for (j = 0; j < 4; j++)
-		{
-			if (a[i][j] == max)
-			{
-				printf("max=%d,row=%d,colum=%d\n", max, i + 1, j + 1);
-			}
-		}
-	}
+	int gcd(int x, int y);
+	int lcm(int x, int y);
+	int a, b;
+	int G, L;
+	scanf("%d,%d", &a, &b);
+	G = gcd(a, b);
+	printf("G=%d\n", G);
+	L = lcm(a, b);
+	printf("L=%d\n", L);
 	return 0;
+}
+int gcd(int x, int y)
+{
+	int m;
+	m = x % y;
+	for (; m != 0; m = x % y)
+	{
+		x = y;
+		y = m;
+	}
+	return (y);
+}
+int lcm(int x, int y)
+{
+	int t, n;
+	int gcd(int x, int y);
+	t = gcd(x, y);
+	n = x * y / t;
+	return (n);
 }

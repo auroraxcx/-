@@ -1,17 +1,21 @@
-#include <stdio.h>
+#include <stdio.h>//用指针比大小并交换
 int main()
 {
-    int f(int);
-    int a = 2, i;
-    for (i = 0; i < 3; i++)
-        printf("%d\n", f(a));
+    int a, b;
+    int *p = &a, *q = &b;
+    void swap(int *x, int *y);
+    scanf("%d,%d", p, q);
+    if (a < b)
+    {
+        swap(p, q);
+    }
+    printf("max=%d,min=%d\n", a, b);
     return 0;
 }
-int f(int a)
+void swap(int *x, int *y)
 {
-    auto int b = 0;
-    static int c = 3;
-    b = b + 1;
-    c = c + 1;
-    return (a + b + c);
+    int c;
+    c = *x;
+    *x = *y;
+    *y = c;
 }
