@@ -1,36 +1,16 @@
-#include <stdio.h> 
-int main()
+#include <stdio.h>
+void main(void)
 {
-    void sort(int x[], int n);
-    int i, *p, a[10];
-    p = a;
-    printf("请输入十个数字:\n");
-    for (i = 0; i < 10; i++)
-        scanf("%d", p++);
-    p = a;
-    sort(p, 10);
-    for (p = a, i = 0; i < 10; i++)
-    {
-        printf("%d  ", *p);
-        p++;
-    }
-    printf("\n");
-    return 0;
-}
-void sort(int x[], int n)
-{
-    int i, j, k, t;
-    for (i = 0; i < n - 1; i++)
-    {
-        k = i;
-        for (j = i + 1; j < n; j++)
-            if (x[j] > x[k])
-                k = j;
-        if (k != i)
-        {
-            t = x[i];
-            x[i] = x[k];
-            x[k] = t;
-        }
-    }
+int m=10,n,o;
+int *z=&m ;
+printf("\n\n Pointer : Show the basic declaration of pointer : \n" );
+printf("--------------------\n");
+printf(" Here is m=10,n and o are two integer variable and*z is an integer" ) ;
+printf("\n\n z stores the address of m = %p\n", z);
+printf("\n*z stores the value of m = %i\n", *z);
+printf("\n &m is the address of m = %p\n",&m); 
+
+printf("\n &n stores the address of n = %p\n", &n ) ;
+printf("\n &o stores the address of o = %p\n",&o);
+printf("\n &z stores the address of z = %p\n\n", &z); 
 }

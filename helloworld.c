@@ -1,29 +1,19 @@
-#include <stdio.h> //6.写一个函数,将两个字符串连接。
-void link(char a[], char b[], char c[])
+
+#include <stdio.h>
+	void
+	main(void)
 {
-	int i, j = 0, k;
-	for (i = 0; a[i] != '\0'; i++)
-	{
-		c[j] = a[i];
-		j++;
-	}
-	for (k = 0; b[k] != '\0'; k++)
-	{
-		c[j] = b[k];
-		j++;
-	}
-	printf("连接后字符串为：%s", c);
-}
-int main()
-{
-	char str1[50], str2[50], str3[100];
-	printf("请输入第一个字符串：");
-	gets(str1);
-	printf("第一个字符串为：%s", str1);
-	printf("\n请输入第二个字符串:");
-	gets(str2);
-	printf("第二个字符串为：%s", str2);
-	getchar();
-	link(str1,str2,str3);
-	return 0;
+	int m = 10, n, o;
+	int *z = &m;
+printf("\n\n Pointer : Show the basic declaration of
+pointer :\n");
+printf("---------------\n");
+printf("Here is m=10, n and o are two integer variable and
+*z is an integer");
+printf("\n\n z stores the address of m = %p\n", z);
+printf("\n *z stores the value of m = %i\n",*z);
+printf("\n &m is the address of m = %p\n", &m); 
+printf("\n &n stores the address of n = %p\n",&n);
+printf("\n &o stores the address of o = %p\n",&o);
+printf("\n &z stores the address of z = %p\n\n", &z);
 }
